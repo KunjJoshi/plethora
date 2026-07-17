@@ -1,0 +1,8 @@
+# plethora-ai/pyproject.toml
+# This is a Virtual Workspace. Note there is NO [project] table here.
+
+[tool.uv.workspace]
+members = [
+    "plethora-db",
+    "plethora-api/src"
+]

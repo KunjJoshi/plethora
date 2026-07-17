@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / build
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Environment variables — never commit secrets
+.env
+.env.*
+!.env.example
+
+# uv
+# uv.lock is intentionally committed for reproducible installs
+
+# Alembic
+# versions/ is committed; ignore only local throw-away files
+alembic/versions/__pycache__/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+
+# Type checkers
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Logs
+*.log
