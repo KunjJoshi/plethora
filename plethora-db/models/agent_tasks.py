@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, DateTime, ForeignKey, func
+from sqlalchemy import Column, String, Text, DateTime, ForeignKey, func
 from sqlalchemy.dialects.postgresql import UUID
 from database import Base
 
@@ -13,6 +13,8 @@ class AgentTask(Base):
         nullable=False
     )
     task_slug = Column(String, nullable=False)
+    task_name = Column(String, nullable=True)
+    task_description = Column(Text, nullable=True)
     current_phase_id = Column(
         UUID(as_uuid=True),
         ForeignKey('pipeline_phases.id', ondelete='SET NULL'),

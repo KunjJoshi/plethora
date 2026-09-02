@@ -6,6 +6,8 @@ from database import Base
 
 class SessionStatus(str, enum.Enum):
     ACTIVE = "active"
+    APPROVED = "approved"
+    HALTED = "halted"
     CLOSED = "closed"
     FAILED = "failed"
 

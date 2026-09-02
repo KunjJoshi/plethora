@@ -22,7 +22,7 @@ from config_api.dependencies import get_current_user
 load_dotenv()
 logger = getLogger(__name__)
 
-router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter(prefix="/api/v1/users", tags=["Users"])
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL_REST")
 ANON_KEY = os.environ.get("SUPABASE_ANON_KEY")

@@ -21,3 +21,8 @@ class MarketplaceAgentSchema(BaseModel):
 class MarketplaceResponse(BaseModel):
     agents: list[MarketplaceAgentSchema]
     success: bool
+
+
+class AllowedAppsResponse(BaseModel):
+    apps: list[AllowedAISchema]
+    success: bool

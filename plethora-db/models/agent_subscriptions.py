@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import Column, DateTime, ForeignKey, Enum, func
+from sqlalchemy import Column, String, DateTime, ForeignKey, Enum, func
 from sqlalchemy.dialects.postgresql import UUID
 from database import Base
 
@@ -23,5 +23,6 @@ class AgentSubscription(Base):
         nullable=False,
         default=SubscriptionStatus.PRE_INIT
     )
+    oauth_state = Column(String, nullable=True)  # random token for GitHub OAuth CSRF verification
     created_at = Column(DateTime, server_default=func.now())
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())

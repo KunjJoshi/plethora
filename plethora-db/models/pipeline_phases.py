@@ -1,6 +1,6 @@
 # plethora-db/models/pipeline_phase.py
 import enum
-from sqlalchemy import Column, String, Integer, ForeignKey, Enum, func
+from sqlalchemy import Column, String, Text, Integer, ForeignKey, Enum, func
 from sqlalchemy.dialects.postgresql import UUID
 from database import Base
 
@@ -18,4 +18,4 @@ class PipelinePhase(Base):
     phase_name = Column(String, nullable=False)
     phase_number = Column(Integer, nullable=False)
     phase_type = Column(Enum(PhaseType), nullable=False)
-    prompt_url = Column(String, nullable=False)  # static template file (S3, raw URL); if unreachable, phase fails
+    prompt = Column(Text, nullable=False)
